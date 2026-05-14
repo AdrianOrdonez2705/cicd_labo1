@@ -27,7 +27,8 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy to AWS S3
-        run: aws s3 sync . s3://adrian-ordonez-labo-githubactions \
+        run: |
+          aws s3 sync . s3://adrian-ordonez-labo-githubactions \
           --exclude ".git/*" \
           --exclude ".github/*" \
           --exclude "node_modules/*" \
